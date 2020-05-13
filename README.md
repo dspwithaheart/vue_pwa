@@ -1,5 +1,5 @@
 # vue_pwa
-See [Live Demo](https://dspwithaheart.github.io/anime_js/).
+See [Live Demo](https://dspwithaheart.github.io/vue_pwa/).
 ## Project setup
 ```
 npm install
