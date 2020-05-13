@@ -72,7 +72,7 @@
             :to="item.href"
           >
             <v-list-item-action>
-              <v-icon @click.stop="fuckOff">{{ item.icon }}</v-icon>
+              <v-icon >{{ item.icon }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>
@@ -91,12 +91,12 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <!-- <v-toolbar-title
+      <v-toolbar-title
         style="width: 300px"
         class="ml-0 pl-4"
       >
-        <span class="hidden-sm-and-down">Google Contacts</span>
-      </v-toolbar-title> -->
+        <span >Bio Einkauszettel</span>
+      </v-toolbar-title>
       
       <!-- <v-spacer></v-spacer>
       <v-btn icon>
@@ -130,14 +130,29 @@
                 </v-row>
             </v-container>
     </v-content>
+    <v-btn
+      bottom
+      color="pink"
+      dark
+      fab
+      fixed
+      right
+      @click="addItems"
+    >
+      <v-icon>mdi-plus</v-icon>
+    </v-btn>
+
+    <Dialog/>
+
+
   </v-app>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Dialog from './components/Dialog.vue'
   export default {
     components: {
-      // HelloWorld
+      Dialog
     },
     props: {
       source: String,
@@ -145,7 +160,7 @@
     data: () => ({
       // App Drawer properties
       dialog: false,
-      drawer: null,
+      drawer: false,
       right: false,
       permanent: false,
       miniVariant: false,
@@ -154,36 +169,36 @@
       absolute: false,
       // Items in the App Drawer
       items: [
-        { icon: 'mdi-contacts', text: 'Contacts', href: '/contacts' },
-        { icon: 'mdi-history', text: 'Frequently contacted' },
-        { icon: 'mdi-content-copy', text: 'Duplicates' },
-        {
-          icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'Labels',
-          model: true,
-          children: [
-            { icon: 'mdi-plus', text: 'Create label' },
-          ],
-        },
-        {
-          icon: 'mdi-chevron-up',
-          'icon-alt': 'mdi-chevron-down',
-          text: 'More',
-          model: false,
-          children: [
-            { text: 'Import' },
-            { text: 'Export' },
-            { text: 'Print' },
-            { text: 'Undo changes' },
-            { text: 'Other contacts' },
-          ],
-        },
-        { icon: 'mdi-settings', text: 'Settings' },
-        { icon: 'mdi-message', text: 'Send feedback' },
-        { icon: 'mdi-help-circle', text: 'Help' },
-        { icon: 'mdi-cellphone-link', text: 'App downloads' },
-        { icon: 'mdi-keyboard', text: 'Go to the old version' },
+        // { icon: 'mdi-contacts', text: 'Contacts', href: '/contacts' },
+        // { icon: 'mdi-history', text: 'Frequently contacted' },
+        // { icon: 'mdi-content-copy', text: 'Duplicates' },
+        // {
+        //   icon: 'mdi-chevron-up',
+        //   'icon-alt': 'mdi-chevron-down',
+        //   text: 'Labels',
+        //   model: true,
+        //   children: [
+        //     { icon: 'mdi-plus', text: 'Create label' },
+        //   ],
+        // },
+        // {
+        //   icon: 'mdi-chevron-up',
+        //   'icon-alt': 'mdi-chevron-down',
+        //   text: 'More',
+        //   model: false,
+        //   children: [
+        //     { text: 'Import' },
+        //     { text: 'Export' },
+        //     { text: 'Print' },
+        //     { text: 'Undo changes' },
+        //     { text: 'Other contacts' },
+        //   ],
+        // },
+        // { icon: 'mdi-settings', text: 'Settings' },
+        // { icon: 'mdi-message', text: 'Send feedback' },
+        // { icon: 'mdi-help-circle', text: 'Help' },
+        // { icon: 'mdi-cellphone-link', text: 'App downloads' },
+        // { icon: 'mdi-keyboard', text: 'Go to the old version' },
       ],
     }),
     computed: {
@@ -192,8 +207,8 @@
       },
     },
     methods: {
-      fuckOff() {
-        alert('fuckOff')
+      addItems() {
+        this.$store.state.dialog = !this.$store.state.dialog 
       },
       toggleTheme() {
         this.$vuetify.theme.dark = !this.$vuetify.theme.dark;      
