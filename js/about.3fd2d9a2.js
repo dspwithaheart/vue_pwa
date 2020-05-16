@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,e,r){"use strict";r.r(e);var n=function(){var t=this,e=t.$createElement,r=t._self._c||e;return r("iframe",{staticStyle:{width:"100%",height:"100%"},attrs:{frameborder:"0",src:"https://vuetifyjs.com"}})},s=[],a=r("2877"),c={},i=Object(a["a"])(c,n,s,!1,null,null,null);e["default"]=i.exports}}]);
+//# sourceMappingURL=about.3fd2d9a2.js.map
