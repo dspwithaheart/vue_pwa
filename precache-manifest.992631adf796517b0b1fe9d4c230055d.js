@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue_pwa/PrimaryIonDrive.glb"
   },
   {
-    "revision": "f767750c58a3ccb18d789fa5401314d0",
+    "revision": "c3a12ea7198855abb32a8733e3f29d19",
     "url": "/vue_pwa/PrimaryIonDrive.gltf"
   },
   {
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue_pwa/img/map/spekular.jpg"
   },
   {
-    "revision": "6031a11d59fa168977c7cbfd6e3cbd16",
+    "revision": "baa8e1ee694c4fbe5a4dc6bce71e24ca",
     "url": "/vue_pwa/index.html"
   },
   {
@@ -56,8 +56,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vue_pwa/js/about.3fd2d9a2.js"
   },
   {
-    "revision": "bfc92027106533d01e58",
-    "url": "/vue_pwa/js/app.86493c7a.js"
+    "revision": "4d39cd416508fac3d084",
+    "url": "/vue_pwa/js/app.ec02203c.js"
   },
   {
     "revision": "9de8980dcfa4fa0b99b6",
