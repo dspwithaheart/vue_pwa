@@ -20,9 +20,34 @@ Vue.use(VueRouter)
   },
   {
     path: '/three',
-    name: 'ThreeAnime',
-    component: () => import(/* webpackChunkName: "about" */ '../components/ThreeAnime.vue')
+    name: 'Three',
+    component: () => import(/* webpackChunkName: "three" */ '../components/ThreeAnime.vue')
+  },
+  {
+    path: '/forcegraph',
+    name: 'ForceGraph',
+    component: () => import(/* webpackChunkName: "forcegraph" */ '../components/ForceGraph.vue')
+  },
+  {
+    path: '/unrealbloom',
+    name: 'UnrealBloom',
+    component: () => import(/* webpackChunkName: "unrealbloom" */ '../components/UnrealBloom.vue')
+  },
+  {
+    path: '/interactivepoints',
+    name: 'InteractivePoints',
+    component: () => import(/* webpackChunkName: "interactivepoints" */ '../components/InteractivePoints.vue')
+  },
+  {
+    path: '/shaders',
+    name: 'Shaders',
+    component: () => import(/* webpackChunkName: "shaders" */ '../components/Shaders.vue')
   }
+  // {
+  //   path: '/githubio',
+  //   name: 'Github',
+  //   component: () => import(/* webpackChunkName: "githubio" */ '../components/Github.vue')
+  // }
 ]
 
 const router = new VueRouter({

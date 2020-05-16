@@ -87,7 +87,8 @@
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      color="blue darken-3"
+      color="transparent"
+      inverted-scroll
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -167,11 +168,18 @@ import Dialog from './components/Dialog.vue'
       expandOnHover: false,
       background: true,
       absolute: false,
+      color: '',
       // Items in the App Drawer
       items: [
-        // { icon: 'mdi-contacts', text: 'Contacts', href: '/contacts' },
-        // { icon: 'mdi-history', text: 'Frequently contacted' },
-        // { icon: 'mdi-content-copy', text: 'Duplicates' },
+        { icon: 'mdi-home', text: 'Home', href: '/' },
+        { icon: 'mdi-video-3d', text: 'Three', href: '/three' },
+        { icon: 'mdi-graph', text: 'Force Graph', href: '/forcegraph' },
+        { icon: 'mdi-pizza', text: 'Unreal Bloom', href: '/unrealbloom' },
+        { icon: 'mdi-point', text: 'Interactive Points', href: '/interactivepoints' },
+        { icon: 'mdi-shader', text: 'Shaders', href: '/shaders' },
+
+
+        // { icon: 'mdi-github', text: 'Github.io', href: '/githubio' },
         // {
         //   icon: 'mdi-chevron-up',
         //   'icon-alt': 'mdi-chevron-down',

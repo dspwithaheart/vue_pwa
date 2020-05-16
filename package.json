@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "3d-force-graph": "^1.62.1",
     "@mdi/font": "^3.6.95",
     "core-js": "^3.6.4",
     "motion-sensors-polyfill": "^0.3.1",
